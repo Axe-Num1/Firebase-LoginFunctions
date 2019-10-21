@@ -64,12 +64,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zIu-Me-QQs">
-                                <rect key="frame" x="159" y="265" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PW" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kDz-W6-M8R">
                                 <rect key="frame" x="159" y="349" width="97" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -95,7 +89,6 @@
                         <viewLayoutGuide key="safeArea" id="1Co-0h-fzV"/>
                     </view>
                     <connections>
-                        <outlet property="nameField" destination="zIu-Me-QQs" id="QmF-2r-CLw"/>
                         <outlet property="signUpEmailField" destination="oWO-Ni-7aD" id="5gr-1n-dnG"/>
                         <outlet property="signUpPwField" destination="kDz-W6-M8R" id="2p2-cd-ye3"/>
                     </connections>

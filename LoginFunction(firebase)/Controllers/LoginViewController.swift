@@ -25,10 +25,12 @@ class LoginViewController: UIViewController {
                 self.present(nextView!, animated: true, completion: nil)
                 // TODO: 로그인 성공 user 객체에서 정보 사용
             } else {
-                self.alert(title: "Noob", message: "Check Email or PW")
+                self.alert(title: "로그인 실패", message: "이메일이나 비밀번호를 확인해주세요")
                 // TODO: 로그인 실패 처리
             }
         }
     }
     
 }
+
+// 참고 : http://monibu1548.github.io/2019/01/13/firebase-auth-1/

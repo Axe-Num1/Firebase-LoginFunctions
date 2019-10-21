@@ -11,10 +11,9 @@ import FirebaseAuth
 
 class SignInViewController: UIViewController {
     
-    @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var signUpEmailField: UITextField!
     @IBOutlet weak var signUpPwField: UITextField!
-
+    
     @IBAction func signUpButton(_ sender: Any) {
         doSignUp()
     }
@@ -75,3 +74,5 @@ extension SignInViewController{
         })
     }
 }
+
+// 참고 : https://eunjin3786.tistory.com/5
