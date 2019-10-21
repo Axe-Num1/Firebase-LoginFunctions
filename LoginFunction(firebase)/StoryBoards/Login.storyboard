@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="aa8-yu-ps7">
             <objects>
-                <viewController storyboardIdentifier="LoginView" id="5Li-5J-j6m" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginView" id="5Li-5J-j6m" customClass="LoginViewController" customModule="LoginFunction_firebase_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UTH-o3-Mne">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,8 +27,11 @@
                                 <rect key="frame" x="188" y="462" width="38" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginButton:" destination="5Li-5J-j6m" eventType="touchUpInside" id="P1B-ji-uU5"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rpd-UA-efe">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rpd-UA-efe">
                                 <rect key="frame" x="140" y="366" width="135" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -44,15 +47,19 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="5Di-eG-Nav"/>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="rpd-UA-efe" id="6Yb-Fn-Ylb"/>
+                        <outlet property="pWField" destination="fuY-6z-3ag" id="rSL-0p-TWU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V8K-H1-2Uu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="120.53571428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign In View Controller-->
         <scene sceneID="ORb-ki-OcC">
             <objects>
-                <viewController id="X8s-67-Km5" sceneMemberID="viewController">
+                <viewController id="X8s-67-Km5" customClass="SignInViewController" customModule="LoginFunction_firebase_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rGD-DV-9B2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -79,15 +86,23 @@
                                 <rect key="frame" x="180" y="440" width="54" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="signUpButton:" destination="X8s-67-Km5" eventType="touchUpInside" id="uCo-YX-MOn"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="1Co-0h-fzV"/>
                     </view>
+                    <connections>
+                        <outlet property="nameField" destination="zIu-Me-QQs" id="QmF-2r-CLw"/>
+                        <outlet property="signUpEmailField" destination="oWO-Ni-7aD" id="5gr-1n-dnG"/>
+                        <outlet property="signUpPwField" destination="kDz-W6-M8R" id="2p2-cd-ye3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qh5-nw-a5h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="864" y="473"/>
+            <point key="canvasLocation" x="872" y="121"/>
         </scene>
     </scenes>
 </document>

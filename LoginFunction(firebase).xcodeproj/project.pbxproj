@@ -10,6 +10,8 @@
 		011F6AA1977F166D41E3B914 /* Pods_LoginFunction_firebase_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D718EC7EB630E44F1E1B204 /* Pods_LoginFunction_firebase_.framework */; };
 		F21FD9C6235C97E900D7D3AB /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21FD9C5235C97E900D7D3AB /* UIViewControllerExtension.swift */; };
 		F21FD9C9235C993200D7D3AB /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21FD9C8235C993200D7D3AB /* Login.storyboard */; };
+		F21FD9CC235D24EA00D7D3AB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21FD9CB235D24EA00D7D3AB /* LoginViewController.swift */; };
+		F21FD9CE235D66CB00D7D3AB /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21FD9CD235D66CB00D7D3AB /* SignInViewController.swift */; };
 		F23FFF8F235B286200B1B1CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F23FFF8E235B286200B1B1CA /* GoogleService-Info.plist */; };
 		F2781B9C23599BD7007ED8AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2781B9B23599BD7007ED8AF /* AppDelegate.swift */; };
 		F2781B9E23599BD7007ED8AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2781B9D23599BD7007ED8AF /* SceneDelegate.swift */; };
@@ -26,6 +28,8 @@
 		BF1C3ED26D257D44958A7DE0 /* Pods-LoginFunction(firebase).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginFunction(firebase).debug.xcconfig"; path = "Target Support Files/Pods-LoginFunction(firebase)/Pods-LoginFunction(firebase).debug.xcconfig"; sourceTree = "<group>"; };
 		F21FD9C5235C97E900D7D3AB /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		F21FD9C8235C993200D7D3AB /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		F21FD9CB235D24EA00D7D3AB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F21FD9CD235D66CB00D7D3AB /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		F23FFF8E235B286200B1B1CA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F2781B9823599BD7007ED8AF /* LoginFunction(firebase).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LoginFunction(firebase).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2781B9B23599BD7007ED8AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				F2781B9F23599BD7007ED8AF /* MainViewController.swift */,
+				F21FD9CB235D24EA00D7D3AB /* LoginViewController.swift */,
+				F21FD9CD235D66CB00D7D3AB /* SignInViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -120,8 +126,8 @@
 				F2781B9B23599BD7007ED8AF /* AppDelegate.swift */,
 				F2781B9D23599BD7007ED8AF /* SceneDelegate.swift */,
 				F2781BAC23599BD8007ED8AF /* Info.plist */,
-				F21FD9CA235C9ACB00D7D3AB /* Controllers */,
 				F21FD9C4235C979600D7D3AB /* Extensions */,
+				F21FD9CA235C9ACB00D7D3AB /* Controllers */,
 				F21FD9C7235C98D300D7D3AB /* StoryBoards */,
 			);
 			path = "LoginFunction(firebase)";
@@ -244,6 +250,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F21FD9CC235D24EA00D7D3AB /* LoginViewController.swift in Sources */,
+				F21FD9CE235D66CB00D7D3AB /* SignInViewController.swift in Sources */,
 				F2781BA023599BD7007ED8AF /* MainViewController.swift in Sources */,
 				F2781B9C23599BD7007ED8AF /* AppDelegate.swift in Sources */,
 				F21FD9C6235C97E900D7D3AB /* UIViewControllerExtension.swift in Sources */,
