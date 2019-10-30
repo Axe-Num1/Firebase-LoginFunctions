@@ -10,11 +10,18 @@ import UIKit
 import Firebase
 
 class LoginViewController: UIViewController {
+    
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var placeholderLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var placeholderLabel: UILabel!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    @IBOutlet weak var emailField: UITextField!
+
     @IBOutlet weak var pWField: UITextField!
     
     @IBAction func loginButton(_ sender: Any) {
@@ -32,5 +39,15 @@ class LoginViewController: UIViewController {
     }
     
 }
+
+extension LoginViewController: UITextFieldDelegate{
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        return true
+    }
+    
+}
+
+
+
 
 // 참고 : http://monibu1548.github.io/2019/01/13/firebase-auth-1/
