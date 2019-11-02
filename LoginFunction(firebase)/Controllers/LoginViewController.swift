@@ -16,7 +16,15 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var placeholderLabel: UILabel!
     
-    
+    /**
+     emailField 문자입력 제약 추가
+     */
+    let charSet: CharacterSet = {
+        var cs = CharacterSet.capitalizedLetters
+        cs.insert(charactersIn: "@")
+        cs.insert(charactersIn: " ")
+        return cs // 허용되지 않는 문자 반환
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +50,31 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController: UITextFieldDelegate{
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        // 입력 값 검사
+        if string.count > 0 {
+            guard string.rangeOfCharacter(from: charSet) == nil else {
+                return false
+            }
+        }
+        
+        let finalText = NSMutableString(string: textField.text ?? "")
+        finalText.replaceCharacters(in: range, with: string)
+        
+        let font = textField.font ?? UIFont.systemFont(ofSize: 16)
+        
+        let dict = [NSAttributedString.Key.font: font]
+        
+        let width = finalText.size(withAttributes: dict).width
+        
+        placeholderLeadingConstraint.constant = width
+        
+        if finalText.length == 0 {
+            placeholderLabel.text = "Example@gmail.com"
+        } else {
+            placeholderLabel.text = "@gmail.com"
+        }
+        
         return true
     }
     
