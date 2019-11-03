@@ -98,6 +98,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="HLH-Hk-BLJ"/>
                     <connections>
+                        <outlet property="bottomConstraint" destination="e8g-Bn-cgk" id="Wnk-jN-hUR"/>
                         <outlet property="emailField" destination="N1w-9r-dFC" id="yYt-ik-I6g"/>
                         <outlet property="nextButton" destination="N7A-ha-tjW" id="g3C-ho-Dwt"/>
                         <outlet property="placeholderLabel" destination="jv0-fw-Lfp" id="Hvj-TJ-gsp"/>
