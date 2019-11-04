@@ -45,6 +45,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        nextButton.isEnabled = false
+        
         var token = NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: OperationQueue.main) {
             [weak self] (noti) in
             if let frameValue = noti.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
@@ -119,6 +121,8 @@ extension LoginViewController: UITextFieldDelegate{
         } else {
             placeholderLabel.text = "@gmail.com"
         }
+        
+        nextButton.isEnabled = finalText.length > 0
         
         return true
     }
