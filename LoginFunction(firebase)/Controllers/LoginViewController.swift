@@ -92,6 +92,16 @@ class LoginViewController: UIViewController {
 }
 
 extension LoginViewController: UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        let cnt = textField.text?.count ?? 0
+        
+        if cnt > 0 {
+            performSegue(withIdentifier: "PWSegue", sender: nil)
+        }
+        
+        return true
+    }
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
         UIView.setAnimationsEnabled(false)
     }

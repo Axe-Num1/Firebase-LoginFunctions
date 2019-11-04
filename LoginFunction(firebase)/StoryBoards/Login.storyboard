@@ -24,6 +24,9 @@
                                             <constraint firstAttribute="width" constant="60" id="wgY-L7-gxy"/>
                                         </constraints>
                                         <state key="normal" title="Next"/>
+                                        <connections>
+                                            <segue destination="QFS-7p-CP2" kind="show" identifier="PWSegue" id="o2H-kz-qw3"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -109,6 +112,89 @@
             </objects>
             <point key="canvasLocation" x="910.14492753623199" y="120.53571428571428"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="gDW-p6-y7f">
+            <objects>
+                <viewController id="QFS-7p-CP2" customClass="PWViewController" customModule="LoginFunction_firebase_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yWa-Xc-knE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Pn-9O-r7L" userLabel="HeaderView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6b0-Iv-10d">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="39U-D3-Hew"/>
+                                        </constraints>
+                                        <state key="normal" title="Perv"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="6b0-Iv-10d" firstAttribute="leading" secondItem="9Pn-9O-r7L" secondAttribute="leading" id="CHe-6w-xyl"/>
+                                    <constraint firstAttribute="height" constant="60" id="CJW-sG-37I"/>
+                                    <constraint firstItem="6b0-Iv-10d" firstAttribute="top" secondItem="9Pn-9O-r7L" secondAttribute="top" id="aPu-jt-CyE"/>
+                                    <constraint firstAttribute="bottom" secondItem="6b0-Iv-10d" secondAttribute="bottom" id="fdp-p0-l5J"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6lh-hd-Z5m" userLabel="ContentsView">
+                                <rect key="frame" x="0.0" y="104" width="414" height="758"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your New Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIn-4P-std">
+                                        <rect key="frame" x="20" y="359" width="374" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FQg-MB-wnO">
+                                        <rect key="frame" x="20" y="359" width="374" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="ncA-zl-2dC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" textContentType="new-password"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your New Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pph-fx-cXw">
+                                        <rect key="frame" x="20" y="344" width="119" height="15"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="FQg-MB-wnO" firstAttribute="leading" secondItem="6lh-hd-Z5m" secondAttribute="leading" constant="20" id="C2L-7n-fQq"/>
+                                    <constraint firstItem="FQg-MB-wnO" firstAttribute="centerY" secondItem="6lh-hd-Z5m" secondAttribute="centerY" id="Pyu-Jl-RhE"/>
+                                    <constraint firstItem="Pph-fx-cXw" firstAttribute="leading" secondItem="FQg-MB-wnO" secondAttribute="leading" id="VAr-tn-iGn"/>
+                                    <constraint firstAttribute="trailing" secondItem="FQg-MB-wnO" secondAttribute="trailing" constant="20" id="W8e-Oc-6yU"/>
+                                    <constraint firstItem="jIn-4P-std" firstAttribute="height" secondItem="FQg-MB-wnO" secondAttribute="height" id="Xvh-S9-cuy"/>
+                                    <constraint firstItem="jIn-4P-std" firstAttribute="centerY" secondItem="FQg-MB-wnO" secondAttribute="centerY" id="hy3-fm-ZVQ"/>
+                                    <constraint firstItem="jIn-4P-std" firstAttribute="leading" secondItem="FQg-MB-wnO" secondAttribute="leading" id="kb7-L8-ZAa"/>
+                                    <constraint firstItem="FQg-MB-wnO" firstAttribute="top" secondItem="Pph-fx-cXw" secondAttribute="bottom" id="nUx-ci-mZZ"/>
+                                    <constraint firstItem="jIn-4P-std" firstAttribute="trailing" secondItem="FQg-MB-wnO" secondAttribute="trailing" id="wlE-zs-apl"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6lh-hd-Z5m" firstAttribute="top" secondItem="9Pn-9O-r7L" secondAttribute="bottom" id="4lc-Kv-Xo9"/>
+                            <constraint firstItem="9Pn-9O-r7L" firstAttribute="leading" secondItem="aK1-js-g3i" secondAttribute="leading" id="Axr-rf-u9j"/>
+                            <constraint firstItem="aK1-js-g3i" firstAttribute="trailing" secondItem="6lh-hd-Z5m" secondAttribute="trailing" id="Bah-8N-8zp"/>
+                            <constraint firstItem="6lh-hd-Z5m" firstAttribute="leading" secondItem="aK1-js-g3i" secondAttribute="leading" id="Mri-zL-Cmq"/>
+                            <constraint firstItem="aK1-js-g3i" firstAttribute="bottom" secondItem="6lh-hd-Z5m" secondAttribute="bottom" id="iWt-mb-nSn"/>
+                            <constraint firstItem="9Pn-9O-r7L" firstAttribute="top" secondItem="aK1-js-g3i" secondAttribute="top" id="m6C-JZ-1tT"/>
+                            <constraint firstItem="aK1-js-g3i" firstAttribute="trailing" secondItem="9Pn-9O-r7L" secondAttribute="trailing" id="rbK-ra-Z6K"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aK1-js-g3i"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kTU-Xm-gPO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pbW-sR-amV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1748" y="121"/>
+        </scene>
         <!--Sign In View Controller-->
         <scene sceneID="ORb-ki-OcC">
             <objects>
@@ -148,7 +234,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qh5-nw-a5h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1781.1594202898552" y="120.53571428571428"/>
+            <point key="canvasLocation" x="2641" y="121"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RCx-2o-SId">

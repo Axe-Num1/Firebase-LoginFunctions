@@ -12,6 +12,7 @@
 		F21FD9C9235C993200D7D3AB /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21FD9C8235C993200D7D3AB /* Login.storyboard */; };
 		F21FD9CC235D24EA00D7D3AB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21FD9CB235D24EA00D7D3AB /* LoginViewController.swift */; };
 		F21FD9CE235D66CB00D7D3AB /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21FD9CD235D66CB00D7D3AB /* SignInViewController.swift */; };
+		F23352852370457500C99EDB /* PWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23352842370457500C99EDB /* PWViewController.swift */; };
 		F23FFF8F235B286200B1B1CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F23FFF8E235B286200B1B1CA /* GoogleService-Info.plist */; };
 		F2781B9C23599BD7007ED8AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2781B9B23599BD7007ED8AF /* AppDelegate.swift */; };
 		F2781B9E23599BD7007ED8AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2781B9D23599BD7007ED8AF /* SceneDelegate.swift */; };
@@ -30,6 +31,7 @@
 		F21FD9C8235C993200D7D3AB /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		F21FD9CB235D24EA00D7D3AB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F21FD9CD235D66CB00D7D3AB /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		F23352842370457500C99EDB /* PWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWViewController.swift; sourceTree = "<group>"; };
 		F23FFF8E235B286200B1B1CA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F2781B9823599BD7007ED8AF /* LoginFunction(firebase).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LoginFunction(firebase).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2781B9B23599BD7007ED8AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 		F21FD9CA235C9ACB00D7D3AB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F23352842370457500C99EDB /* PWViewController.swift */,
 				F2781B9F23599BD7007ED8AF /* MainViewController.swift */,
 				F21FD9CB235D24EA00D7D3AB /* LoginViewController.swift */,
 				F21FD9CD235D66CB00D7D3AB /* SignInViewController.swift */,
@@ -257,6 +260,7 @@
 				F21FD9C6235C97E900D7D3AB /* UIViewControllerExtension.swift in Sources */,
 				F2781BA623599BD7007ED8AF /* LoginFunction_firebase_.xcdatamodeld in Sources */,
 				F2781B9E23599BD7007ED8AF /* SceneDelegate.swift in Sources */,
+				F23352852370457500C99EDB /* PWViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
