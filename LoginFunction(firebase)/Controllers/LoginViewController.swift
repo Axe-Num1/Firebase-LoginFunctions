@@ -33,19 +33,19 @@ class LoginViewController: UIViewController {
     var tokens = [NSObjectProtocol]()
     
     deinit {
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
         tokens.forEach{ NotificationCenter.default.removeObserver($0) }
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         emailField.becomeFirstResponder()
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        nextButton.isEnabled = false
         
         var token = NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: OperationQueue.main) {
             [weak self] (noti) in
@@ -72,6 +72,21 @@ class LoginViewController: UIViewController {
         }
         tokens.append(token)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? PWViewController {
+            vc.bottomMargin = bottomConstraint.constant
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        nextButton.isEnabled = false
+        
+    }
+    
+    var presented = false
 
     @IBOutlet weak var pWField: UITextField!
     
@@ -103,7 +118,10 @@ extension LoginViewController: UITextFieldDelegate{
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        UIView.setAnimationsEnabled(false)
+        if !presented {
+            UIView.setAnimationsEnabled(false)
+            presented = true
+        }
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

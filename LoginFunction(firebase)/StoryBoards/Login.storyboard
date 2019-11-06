@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +10,7 @@
         <!--Login View Controller-->
         <scene sceneID="aa8-yu-ps7">
             <objects>
-                <viewController storyboardIdentifier="LoginView" id="5Li-5J-j6m" customClass="LoginViewController" customModule="LoginFunction_firebase_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="5Li-5J-j6m" customClass="LoginViewController" customModule="LoginFunction_firebase_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UTH-o3-Mne">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -129,6 +129,9 @@
                                             <constraint firstAttribute="width" constant="60" id="39U-D3-Hew"/>
                                         </constraints>
                                         <state key="normal" title="Perv"/>
+                                        <connections>
+                                            <action selector="movePrevious:" destination="QFS-7p-CP2" eventType="touchUpInside" id="rlf-Ja-nth"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -154,7 +157,10 @@
                                             <constraint firstAttribute="height" constant="40" id="ncA-zl-2dC"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits" textContentType="new-password"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="new-password"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="QFS-7p-CP2" id="pTT-MU-Icy"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your New Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pph-fx-cXw">
                                         <rect key="frame" x="20" y="344" width="119" height="15"/>
@@ -190,6 +196,13 @@
                         <viewLayoutGuide key="safeArea" id="aK1-js-g3i"/>
                     </view>
                     <navigationItem key="navigationItem" id="kTU-Xm-gPO"/>
+                    <connections>
+                        <outlet property="PWField" destination="FQg-MB-wnO" id="ipb-Hx-kqe"/>
+                        <outlet property="bottomConstraint" destination="iWt-mb-nSn" id="Q7Y-El-wOO"/>
+                        <outlet property="placeholderLabel" destination="jIn-4P-std" id="1t8-KD-z16"/>
+                        <outlet property="titleLabel" destination="Pph-fx-cXw" id="d5x-qi-C1M"/>
+                        <outlet property="titleLabelBottomConstraint" destination="nUx-ci-mZZ" id="9Q5-eJ-jtZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pbW-sR-amV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -239,7 +252,7 @@
         <!--Navigation Controller-->
         <scene sceneID="RCx-2o-SId">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Vbw-wV-AJC" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="StartLoginView" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Vbw-wV-AJC" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iBs-cu-h32">
                         <autoresizingMask key="autoresizingMask"/>

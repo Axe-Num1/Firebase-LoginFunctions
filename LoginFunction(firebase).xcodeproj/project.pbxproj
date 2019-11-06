@@ -94,9 +94,9 @@
 		F21FD9CA235C9ACB00D7D3AB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F23352842370457500C99EDB /* PWViewController.swift */,
 				F2781B9F23599BD7007ED8AF /* MainViewController.swift */,
 				F21FD9CB235D24EA00D7D3AB /* LoginViewController.swift */,
+				F23352842370457500C99EDB /* PWViewController.swift */,
 				F21FD9CD235D66CB00D7D3AB /* SignInViewController.swift */,
 			);
 			path = Controllers;
