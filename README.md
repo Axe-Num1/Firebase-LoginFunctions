@@ -6,8 +6,6 @@
 
 다른 프로젝트에서 로그인 기능 구현이 필요하다면 이 프로젝트를 사용할 수 있습니다.
 
-## Deployment
-
 ## Built With
 
 * [Firebase](https://firebase.google.com/?&gclid=Cj0KCQjwoqDtBRD-ARIsAL4pviClBagMFchiylPsW0mbn23HtPWgLjiTXemq6dYC8telVepxfJKnWtcaAnbtEALw_wcB) - The login framework used
