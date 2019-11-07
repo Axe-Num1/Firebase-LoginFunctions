@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class PWViewController: UIViewController {
     
@@ -25,6 +26,7 @@ class PWViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    var emailText: String!
     
     var tokens = [NSObjectProtocol]()
     
@@ -108,4 +110,21 @@ extension PWViewController: UITextFieldDelegate {
         
         return true
     }
+}
+
+//MARK: firebase login
+extension PWViewController {
+        @IBAction func loginButton(_ sender: Any) {
+            Auth.auth().signIn(withEmail: emailText, password: PWField.text!) { (user, error) in
+                if user != nil{
+                    let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let nextView = storyboard.instantiateInitialViewController()
+                    self.present(nextView!, animated: true, completion: nil)
+                    // TODO: 로그인 성공 user 객체에서 정보 사용
+                } else {
+                    self.alert(title: "로그인 실패", message: "이메일이나 비밀번호를 확인해주세요")
+                    // TODO: 로그인 실패 처리
+                }
+            }
+        }
 }

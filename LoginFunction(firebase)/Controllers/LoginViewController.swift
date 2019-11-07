@@ -76,6 +76,7 @@ class LoginViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? PWViewController {
             vc.bottomMargin = bottomConstraint.constant
+            vc.emailText = emailField.text ?? ""
         }
     }
     
@@ -87,20 +88,6 @@ class LoginViewController: UIViewController {
     }
     
     var presented = false
-    
-//    @IBAction func loginButton(_ sender: Any) {
-//        Auth.auth().signIn(withEmail: emailField.text!, password: pWField.text!) { (user, error) in
-//            if user != nil{
-//                let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//                let nextView = storyboard.instantiateInitialViewController()
-//                self.present(nextView!, animated: true, completion: nil)
-//                // TODO: 로그인 성공 user 객체에서 정보 사용
-//            } else {
-//                self.alert(title: "로그인 실패", message: "이메일이나 비밀번호를 확인해주세요")
-//                // TODO: 로그인 실패 처리
-//            }
-//        }
-//    }
     
 }
 
