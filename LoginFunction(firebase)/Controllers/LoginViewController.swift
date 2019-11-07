@@ -87,25 +87,24 @@ class LoginViewController: UIViewController {
     }
     
     var presented = false
-
-    @IBOutlet weak var pWField: UITextField!
     
-    @IBAction func loginButton(_ sender: Any) {
-        Auth.auth().signIn(withEmail: emailField.text!, password: pWField.text!) { (user, error) in
-            if user != nil{
-                let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let nextView = storyboard.instantiateInitialViewController()
-                self.present(nextView!, animated: true, completion: nil)
-                // TODO: 로그인 성공 user 객체에서 정보 사용
-            } else {
-                self.alert(title: "로그인 실패", message: "이메일이나 비밀번호를 확인해주세요")
-                // TODO: 로그인 실패 처리
-            }
-        }
-    }
+//    @IBAction func loginButton(_ sender: Any) {
+//        Auth.auth().signIn(withEmail: emailField.text!, password: pWField.text!) { (user, error) in
+//            if user != nil{
+//                let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//                let nextView = storyboard.instantiateInitialViewController()
+//                self.present(nextView!, animated: true, completion: nil)
+//                // TODO: 로그인 성공 user 객체에서 정보 사용
+//            } else {
+//                self.alert(title: "로그인 실패", message: "이메일이나 비밀번호를 확인해주세요")
+//                // TODO: 로그인 실패 처리
+//            }
+//        }
+//    }
     
 }
 
+//MARK: 델리게이트 패턴 구현
 extension LoginViewController: UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         let cnt = textField.text?.count ?? 0
@@ -160,4 +159,4 @@ extension LoginViewController: UITextFieldDelegate{
 
 
 
-// 참고 : http://monibu1548.github.io/2019/01/13/firebase-auth-1/
+// 파이어 베이스 참고 : http://monibu1548.github.io/2019/01/13/firebase-auth-1/

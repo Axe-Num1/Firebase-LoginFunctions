@@ -23,13 +23,15 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="wgY-L7-gxy"/>
                                         </constraints>
-                                        <state key="normal" title="Next"/>
+                                        <state key="normal" title="Next">
+                                            <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        </state>
                                         <connections>
                                             <segue destination="QFS-7p-CP2" kind="show" identifier="PWSegue" id="o2H-kz-qw3"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="C0c-Bg-1Hn"/>
                                     <constraint firstAttribute="bottom" secondItem="N7A-ha-tjW" secondAttribute="bottom" id="J53-mI-Qx6"/>
@@ -49,7 +51,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jv0-fw-Lfp">
                                         <rect key="frame" x="20" y="362" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N1w-9r-dFC">
@@ -70,7 +72,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="zzW-tG-oUR" secondAttribute="trailing" constant="20" id="2WF-1n-EHo"/>
                                     <constraint firstItem="N1w-9r-dFC" firstAttribute="centerY" secondItem="Z8c-ka-Hol" secondAttribute="centerY" id="HHa-rv-McU"/>
@@ -87,7 +89,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="5Di-eG-Nav" firstAttribute="trailing" secondItem="nPo-yU-bkk" secondAttribute="trailing" id="1Kh-DL-WpG"/>
                             <constraint firstItem="5Di-eG-Nav" firstAttribute="trailing" secondItem="Z8c-ka-Hol" secondAttribute="trailing" id="Jv6-6Y-YRZ"/>
@@ -128,13 +130,15 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="39U-D3-Hew"/>
                                         </constraints>
-                                        <state key="normal" title="Perv"/>
+                                        <state key="normal" title="Perv">
+                                            <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        </state>
                                         <connections>
                                             <action selector="movePrevious:" destination="QFS-7p-CP2" eventType="touchUpInside" id="rlf-Ja-nth"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="6b0-Iv-10d" firstAttribute="leading" secondItem="9Pn-9O-r7L" secondAttribute="leading" id="CHe-6w-xyl"/>
                                     <constraint firstAttribute="height" constant="60" id="CJW-sG-37I"/>
@@ -148,7 +152,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your New Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIn-4P-std">
                                         <rect key="frame" x="20" y="359" width="374" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FQg-MB-wnO">
@@ -169,7 +173,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="FQg-MB-wnO" firstAttribute="leading" secondItem="6lh-hd-Z5m" secondAttribute="leading" constant="20" id="C2L-7n-fQq"/>
                                     <constraint firstItem="FQg-MB-wnO" firstAttribute="centerY" secondItem="6lh-hd-Z5m" secondAttribute="centerY" id="Pyu-Jl-RhE"/>
@@ -183,7 +187,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6lh-hd-Z5m" firstAttribute="top" secondItem="9Pn-9O-r7L" secondAttribute="bottom" id="4lc-Kv-Xo9"/>
                             <constraint firstItem="9Pn-9O-r7L" firstAttribute="leading" secondItem="aK1-js-g3i" secondAttribute="leading" id="Axr-rf-u9j"/>
