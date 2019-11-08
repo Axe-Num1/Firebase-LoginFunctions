@@ -2,7 +2,7 @@
 
 파이어베이스를 이용하여 만든 로그인 기능 입니다.
 
-![LoginUI](./image/LoginUI.png)
+![LoginUI](./image/LoginUI.png){: width="60%" height="60%"}
 
 ## Getting Started
 
