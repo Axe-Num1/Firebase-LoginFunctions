@@ -2,7 +2,7 @@
 
 파이어베이스를 이용하여 만든 로그인 기능 입니다.
 
-![Login UI](./image/Login UI.png)
+![LoginUI](./image/LoginUI.png)
 
 ## Getting Started
 
