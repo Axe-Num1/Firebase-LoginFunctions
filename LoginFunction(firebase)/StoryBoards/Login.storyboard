@@ -7,6 +7,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--MainView-->
+        <scene sceneID="L3O-ng-ChK">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="MainView" id="tV3-Wl-JVC" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="TPK-mb-JMb"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="54d-nA-5bZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="538"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="aa8-yu-ps7">
             <objects>
@@ -26,8 +36,23 @@
                                         <state key="normal" title="Next">
                                             <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <segue destination="QFS-7p-CP2" kind="show" identifier="PWSegue" id="o2H-kz-qw3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3fJ-uM-Txr">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="jSO-um-E55"/>
+                                        </constraints>
+                                        <state key="normal" title="Main">
+                                            <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="tV3-Wl-JVC" kind="show" id="kd3-ra-wIF"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -35,7 +60,10 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="C0c-Bg-1Hn"/>
                                     <constraint firstAttribute="bottom" secondItem="N7A-ha-tjW" secondAttribute="bottom" id="J53-mI-Qx6"/>
+                                    <constraint firstAttribute="bottom" secondItem="3fJ-uM-Txr" secondAttribute="bottom" id="JHy-i6-ujf"/>
+                                    <constraint firstItem="3fJ-uM-Txr" firstAttribute="top" secondItem="nPo-yU-bkk" secondAttribute="top" id="RDK-Vz-MDf"/>
                                     <constraint firstItem="N7A-ha-tjW" firstAttribute="top" secondItem="nPo-yU-bkk" secondAttribute="top" id="YjW-L6-Q4a"/>
+                                    <constraint firstItem="3fJ-uM-Txr" firstAttribute="leading" secondItem="nPo-yU-bkk" secondAttribute="leading" id="pIA-4l-0ay"/>
                                     <constraint firstAttribute="trailing" secondItem="N7A-ha-tjW" secondAttribute="trailing" id="sW4-F1-9oU"/>
                                 </constraints>
                             </view>
@@ -147,6 +175,9 @@
                                             <constraint firstAttribute="width" constant="60" id="SZu-ah-KUH"/>
                                         </constraints>
                                         <state key="normal" title="Login">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="disabled">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>

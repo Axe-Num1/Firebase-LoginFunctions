@@ -29,7 +29,6 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
-    
     var tokens = [NSObjectProtocol]()
     
     deinit {

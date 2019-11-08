@@ -73,6 +73,7 @@ class PWViewController: UIViewController {
             })
         }
         tokens.append(token)
+        
     }
     
 
@@ -90,6 +91,17 @@ class PWViewController: UIViewController {
 
 //MARK: UITextFieldDelegate implement
 extension PWViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        let cnt = textField.text?.count ?? 0
+        
+        if cnt > 0 {
+            loginButton(self)
+        }
+        
+        return true
+    }
+    
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         placeholderLabel.alpha = (textField.text ?? "").count > 0 ? 0.0 : 1.0
         
