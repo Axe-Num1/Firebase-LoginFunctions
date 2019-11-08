@@ -88,6 +88,7 @@ class PWViewController: UIViewController {
 
 }
 
+//MARK: UITextFieldDelegate implement
 extension PWViewController: UITextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         placeholderLabel.alpha = (textField.text ?? "").count > 0 ? 0.0 : 1.0
@@ -115,11 +116,12 @@ extension PWViewController: UITextFieldDelegate {
 //MARK: firebase login
 extension PWViewController {
         @IBAction func loginButton(_ sender: Any) {
-            Auth.auth().signIn(withEmail: emailText, password: PWField.text!) { (user, error) in
+            Auth.auth().signIn(withEmail: emailText+"@gmail.com", password: PWField.text!) { (user, error) in
                 if user != nil{
-                    let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                    let nextView = storyboard.instantiateInitialViewController()
-                    self.present(nextView!, animated: true, completion: nil)
+                    self.alert(title: "로그인 성공!", message: "메인화면으로 이동 구현 필요")
+//                    let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//                    let nextView = storyboard.instantiateInitialViewController()
+//                    self.present(nextView!, animated: true, completion: nil)
                     // TODO: 로그인 성공 user 객체에서 정보 사용
                 } else {
                     self.alert(title: "로그인 실패", message: "이메일이나 비밀번호를 확인해주세요")
