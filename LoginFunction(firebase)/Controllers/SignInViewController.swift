@@ -22,9 +22,47 @@ class SignInViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    
+    var tokens = [NSObjectProtocol]()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        signUpEmailField.becomeFirstResponder()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        tokens.forEach{ NotificationCenter.default.removeObserver($0) }
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        var token = NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: OperationQueue.main) {
+            [weak self] (noti) in
+            if let frameValue = noti.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+                let keyboardFrame = frameValue.cgRectValue
+                self?.bottomConstraint.constant = keyboardFrame.size.height
+                
+                UIView.animate(withDuration: 0.3, animations: {
+                    self?.view.layoutIfNeeded()
+                }, completion: { finished in
+                    UIView.setAnimationsEnabled(true)
+                })
+            }
+        }
+        tokens.append(token)
+        
+        token = NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: OperationQueue.main) {
+            [weak self] (noti) in
+            self?.bottomConstraint.constant = 0
+            
+            UIView.animate(withDuration: 0.3, animations: {
+                self?.view.layoutIfNeeded()
+            })
+        }
+        tokens.append(token)
     }
 
     override func didReceiveMemoryWarning() {

@@ -82,7 +82,7 @@
                                             <constraint firstAttribute="height" constant="34" id="s9o-Mp-Opc"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="done"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="done" textContentType="email"/>
                                         <connections>
                                             <outlet property="delegate" destination="5Li-5J-j6m" id="97E-tb-Job"/>
                                         </connections>
@@ -312,33 +312,22 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bXP-3u-wMa">
                                 <rect key="frame" x="0.0" y="104" width="414" height="758"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVd-zP-aqB">
-                                        <rect key="frame" x="20" y="329" width="374" height="20"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OdF-o9-n1B" userLabel="EmailField">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Example@gmail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OdF-o9-n1B" userLabel="EmailField">
                                         <rect key="frame" x="20" y="322" width="374" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="Joi-Ey-9Fx"/>
                                         </constraints>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sEj-6a-Hp0">
-                                        <rect key="frame" x="20" y="409" width="374" height="20"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MHI-fy-r1m" userLabel="PasswordField">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="NewPassword" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MHI-fy-r1m" userLabel="PasswordField">
                                         <rect key="frame" x="20" y="402" width="374" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="G8p-Nd-3De"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="join" textContentType="new-password"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Gmail Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0o-VI-6I7">
                                         <rect key="frame" x="20" y="307" width="118" height="15"/>
@@ -356,20 +345,12 @@
                                 <color key="backgroundColor" red="0.21942377090000001" green="0.44537168739999999" blue="0.87847429509999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="OdF-o9-n1B" secondAttribute="trailing" constant="20" id="7zN-OM-A1b"/>
-                                    <constraint firstItem="aVd-zP-aqB" firstAttribute="height" secondItem="OdF-o9-n1B" secondAttribute="height" multiplier="0.588235" id="CvI-5E-xRh"/>
                                     <constraint firstAttribute="trailing" secondItem="MHI-fy-r1m" secondAttribute="trailing" constant="20" id="Ddl-br-Y3k"/>
-                                    <constraint firstItem="aVd-zP-aqB" firstAttribute="leading" secondItem="OdF-o9-n1B" secondAttribute="leading" id="Dmh-PI-Brk"/>
-                                    <constraint firstItem="sEj-6a-Hp0" firstAttribute="trailing" secondItem="MHI-fy-r1m" secondAttribute="trailing" id="G7d-Zi-kzs"/>
-                                    <constraint firstItem="sEj-6a-Hp0" firstAttribute="centerY" secondItem="bXP-3u-wMa" secondAttribute="centerY" constant="40" id="PIb-uo-G3N"/>
                                     <constraint firstItem="OdF-o9-n1B" firstAttribute="leading" secondItem="bXP-3u-wMa" secondAttribute="leading" constant="20" id="Q6e-tb-6VC"/>
                                     <constraint firstItem="MHI-fy-r1m" firstAttribute="top" secondItem="V9k-JG-s1u" secondAttribute="bottom" id="ZVc-pt-lTD"/>
                                     <constraint firstItem="O0o-VI-6I7" firstAttribute="leading" secondItem="OdF-o9-n1B" secondAttribute="leading" id="ZeH-CA-Dqc"/>
-                                    <constraint firstItem="sEj-6a-Hp0" firstAttribute="leading" secondItem="MHI-fy-r1m" secondAttribute="leading" id="cCl-iU-pgp"/>
-                                    <constraint firstItem="aVd-zP-aqB" firstAttribute="trailing" secondItem="OdF-o9-n1B" secondAttribute="trailing" id="dwX-y5-fGm"/>
                                     <constraint firstItem="OdF-o9-n1B" firstAttribute="centerY" secondItem="bXP-3u-wMa" secondAttribute="centerY" constant="-40" id="fjo-4a-kaI"/>
                                     <constraint firstItem="OdF-o9-n1B" firstAttribute="top" secondItem="O0o-VI-6I7" secondAttribute="bottom" id="iLE-0o-7O5"/>
-                                    <constraint firstItem="aVd-zP-aqB" firstAttribute="centerY" secondItem="bXP-3u-wMa" secondAttribute="centerY" constant="-40" id="jLy-O9-QiB"/>
-                                    <constraint firstItem="sEj-6a-Hp0" firstAttribute="height" secondItem="MHI-fy-r1m" secondAttribute="height" multiplier="0.588235" id="pe2-k0-jh7"/>
                                     <constraint firstItem="MHI-fy-r1m" firstAttribute="centerY" secondItem="bXP-3u-wMa" secondAttribute="centerY" constant="40" id="rkh-XR-rZZ"/>
                                     <constraint firstItem="MHI-fy-r1m" firstAttribute="leading" secondItem="bXP-3u-wMa" secondAttribute="leading" constant="20" id="uyQ-HB-tPa"/>
                                     <constraint firstItem="V9k-JG-s1u" firstAttribute="leading" secondItem="MHI-fy-r1m" secondAttribute="leading" id="zay-eb-VJM"/>
@@ -390,6 +371,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="r2D-eZ-vpr"/>
                     <connections>
+                        <outlet property="bottomConstraint" destination="dUE-hX-YtB" id="9fb-hr-ZmT"/>
                         <outlet property="signUpEmailField" destination="OdF-o9-n1B" id="GFp-x5-iKB"/>
                         <outlet property="signUpPwField" destination="MHI-fy-r1m" id="MIs-ey-Jp7"/>
                     </connections>
